@@ -1,11 +1,11 @@
-import requests
 import random
 import string
+from helpers.api_helpers import ApiClient
 
-BASE_URL = "https://qa-scooter.praktikum-services.ru/api/v1"
 
 def generate_random_string(length=8):
     return ''.join(random.choice(string.ascii_lowercase) for _ in range(length))
+
 
 def register_new_courier():
     login = generate_random_string()
@@ -17,5 +17,5 @@ def register_new_courier():
         "password": password,
         "firstName": first_name
     }
-    response = requests.post(f"{BASE_URL}/courier", json=payload)
+    response = ApiClient.create_courier(payload)
     return response, payload

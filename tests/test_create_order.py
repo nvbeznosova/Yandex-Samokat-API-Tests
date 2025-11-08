@@ -1,7 +1,7 @@
 import pytest
-import requests
 import allure
-from helpers.courier_helper import BASE_URL
+from helpers.api_helpers import ApiClient
+
 
 @allure.epic("Order API")
 @allure.feature("Create order")
@@ -21,6 +21,6 @@ class TestCreateOrder:
             "comment": "Тестовый заказ",
             "color": color
         }
-        response = requests.post(f"{BASE_URL}/orders", json=payload)
+        response = ApiClient.create_order(payload)
         assert response.status_code == 201
         assert "track" in response.json()

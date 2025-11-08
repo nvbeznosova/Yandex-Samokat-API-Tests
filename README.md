@@ -4,11 +4,13 @@
 
 Sprint_7/
 ├── helpers/              # вспомогательные функции (генерация данных, регистрация курьера) 
+│   ├── test_create_courier.py # интерфейс для работы с API (эндпоинты и методы)    
+│   ├── test_login_courier.py # генерация данных и регистрация курьера
 ├── tests/                # тесты для каждой ручки 
-│   ├── test_create_courier.py
-│   ├── test_login_courier.py
-│   ├── test_create_order.py
-│   └── test_get_orders.py
+│   ├── test_create_courier.py # тесты создания курьера
+│   ├── test_login_courier.py # тесты авторизации курьера
+│   ├── test_create_order.py # тесты создания заказа
+│   └── test_get_orders.py # тесты получения списка заказов
 ├── conftest.py           # фикстуры pytest (создание и удаление тестовых данных) 
 ├── requirements.txt      # зависимости проекта 
 └── allure-results/        # Allure-отчет

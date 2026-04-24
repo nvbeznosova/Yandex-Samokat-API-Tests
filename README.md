@@ -14,6 +14,26 @@ The project covers courier creation, login, order placement, and order list retr
 This project contains automated API tests built with **pytest** and the **requests** library.  
 It uses **Allure** for detailed test reports and follows a structured approach with separate helpers for endpoints and data generation.
 
+## Project Structure
+
+```
+Yandex-Samokat-API-Tests/
+    ├── README.md
+    ├── conftest.py
+    ├── .gitignore
+    ├── requirements.txt
+    ├── allure_results/
+    ├── helpers/
+    │   ├── api_helpers.py
+    │   ├── courier_helper.py
+    │   └── endpoints.py
+    └── tests/
+        ├── test_create_courier.py
+        ├── test_create_order.py
+        ├── test_get_orders.py
+        └── test_login_courier.py
+```
+
 ## Test Coverage
 
 ### Courier Creation
@@ -47,27 +67,6 @@ While testing the login endpoint, the following discrepancy was discovered:
 | Expected | Actual |
 |----------|--------|
 | According to API documentation, attempting to login without the required `password` field should return `400 Bad Request`. | The server returns `504 Gateway Timeout`. |
-
-## Project Structure
-
-```
-Yandex-Samokat-API-Tests/
-    ├── README.md
-    ├── conftest.py
-    ├── .gitignore
-    ├── requirements.txt
-    ├── allure_results/
-    ├── helpers/
-    │   ├── api_helpers.py
-    │   ├── courier_helper.py
-    │   └── endpoints.py
-    └── tests/
-        ├── test_create_courier.py
-        ├── test_create_order.py
-        ├── test_get_orders.py
-        └── test_login_courier.py
-
-    ``` 
 
 ## Setup & Installation
 

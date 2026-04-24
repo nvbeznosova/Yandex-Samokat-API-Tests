@@ -2,7 +2,6 @@ import allure
 from helpers.courier_helper import register_new_courier
 from helpers.api_helpers import ApiClient
 
-
 @allure.epic("Courier API")
 @allure.feature("Create courier")
 class TestCreateCourier:

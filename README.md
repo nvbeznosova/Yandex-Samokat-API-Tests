@@ -6,6 +6,8 @@ markdown
 [![requests](https://img.shields.io/badge/requests-2.31+-green.svg)](https://docs.python-requests.org/)
 [![Allure](https://img.shields.io/badge/Allure-2.13-purple.svg)](https://docs.qameta.io/allure/)
 
+**📘 API Documentation:** [Yandex.Samokat API Docs](https://qa-scooter.praktikum-services.ru/docs/) 
+
 Automated API tests for [Yandex.Samokat](https://qa-scooter.praktikum-services.ru/) — a scooter rental service.  
 The project covers courier creation, login, order placement, and order list retrieval.
 

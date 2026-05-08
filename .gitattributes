@@ -1,0 +1,3 @@
+# Ignore Allure reports for language statistics
+allure-results/ linguist-vendored
+allure-report/ linguist-vendored
